@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cash's Cafe App</title>
+    <meta name='viewpoint' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="CSS/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="CSS/mycolor.min.css">
+    <link rel="stylesheet" href="CSS/myfont.css">
+    <link ref='stylesheet' type='text/css' media='screen' herf='CSS/main.css'>
+</head>
+<body>
+        <!--First screen: Welcome -->
+    <section data-role="page" id="pgWelcome">
+        <article role="main" class="ui-content">
+            <h1>Welcome to My Cafe </h1>
+            <p><img src="img/cafe.jpg" class="Myimg"></p>
+            <p>Need an account?<a href="#pgSignUp" data-role="button" data-transition="flip">Sign Up</a></p>
+            <a href="#pgLogIn" data-role="button">Log In</a>
+        </article>
+        <footer data-role="footer" data-position="fixed">
+            <h2>Copyright by Cash</h2>
+        </footer>
+    </section>
+        <!-- End Welcome -->
+
+        <!--Sign Up -->
+    <section data-role="page" id="pgSignUp">
+       <header data-role="header" data-add-back-btn="true">
+            <h1>Sign Up</h1>
+       </header>
+       <article role="main" class="ui-content">
+        <form id="fmSignUp">
+            <label for="inEmailSignUp">Email</label>
+             <input name="inEmailSignUp" type="email" placeholder="cacaokitten@gmail.com" required id="inEmailSignUp">
+             <label for="inPasswordSigUp">Password</label>
+             <input name="inPasswordSignUp" type="password" placeholder="Hellokitten!2021" required id="inPasswordSignUp">
+             <label for="inPasswordConfirmSignUp">Confirm Password</label>
+            <input name="inPasswordConfirmSignUp" type="password" placeholder="Hellokitten!2021" required id="inPasswordConfirmSignUp">
+            <fieldset clas="ui-grid-a">
+                <div class="ui-block-a"><input type="reset" value="Clear"></div>
+                <div class="ui-block-a"><input type="submit" value="Create"></div>
+            </fieldset>
+           
+        </form>
+       </article>
+       <footer data-role="footer" data-position="fixed">
+           <h2>Copyright by Cash</h2>
+       </footer>
+     </section>
+        <!-- End Sign Up -->
+
+        <!--Log In-->
+    <section data-role="page" id="pgLogIn"> 
+        <header data-role="header" data-add-back-btn="true">
+                <h1>Log In</h1>
+        </header>
+        <article role="main" class="ui-content">
+            <form id="fmLogIn">
+                <label for="inEmailLogIn">Email</label>
+                <input name="inEmailLogIn" type="email" placeholder="cashmeow@yahoo.com" required id="inEmailLogIn">
+                <label for="inPasswordLogIn">Password</label>
+                <input name="inPasswordLogIn" type="password" placeholder="Hellokitten!2021"        id="inPasswordLogIn">
+                <!-- To-do: Grid -->
+                <fieldset clas="ui-grid-a">
+                    <div class="ui-block-a"><input type="reset" value="Clear"></div>
+                    <div class="ui-block-a"><input type="submit" value="Go" data-icon="home" data-iconpos="bottom"></div>
+                </fieldset>
+            
+            </form> 
+            <br>
+               <a href="#pgHome">Go to Home Page</a>
+        </article>
+        <footer data-role="footer" data-position="fixed">
+            <h2>Copyright by Cash</h2>
+        </footer>
+    </section>
+
+        <!-- Home -->
+    <section data-role="page" data-them="a" id="pgHome">
+            <header data-role="header">
+                <a href="#pgOptions" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-transition="pop">Options</a>
+
+                <h1>Home</h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#pgHome" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#pgMenu" data-icon="heart">Menu</a></li>
+                        <li><a href="#pgCheckout" data-icon="bars">Check Out</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <article role="main" class="ui-content">
+                Welcome to Our Cat Cafe, San Diego
+                <br>
+                Our cafe is filled with rescue cats and kittens who are looking for their forever homes. You can play with them, cuddle with them, nap with them, do a photoshoot with them, and if you fall in love, adopt them!
+               <br>
+               And Enjoy Our Special drinks
+               <br>
+                <img src="img/cashpic.jpg">
+
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                <h2>Copyright by Cash</h2>
+            </footer>
+    </section>
+
+        <!-- Menu -->
+    <section data-role="page" data-them="b" id="pgMenu">
+            <header data-role="header">
+                <h1>MENU</h1>
+            </header>
+            <article role="main" class="ui-content">
+                <nav data-role="navbar">
+                <ul>
+                    <li><a href="#Coffee" data-icon="plus">Coffee</a></li>
+                    <li><a href="#SpecialTea" data-icon="plus">Special Tea</a></li>
+                    <li><a href="#FruitTea" data-icon="plus">Fruit Tea</a></li>
+                    <li><a href="#Smoothie" data-icon="plus">Smoothie</a></li>
+                </ul>
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                <h2>Copyright by Cash</h2>
+            </footer>
+    </section>
+
+        <!-- Check Out -->
+    <section data-role="page" data-theme="c" if="pgCheckOut">
+        <article role="main" class="ui-content">
+        Check Out Information
+        </article>
+    
+        <footer data-role="footer" data-position="fixed">
+            <h2>Copyright by Cash</h2>
+        </footer>
+    </section>
+
+
+    <section data-role="page" data-dialog="true" id="pgOptions">
+        <header data-role="header">
+            <h1>Options</h1>
+        </header>
+        <article role="main" class="ui-content">
+            <!-- Simple button first, later with JavaScript -->
+            <p><a href="#pgWelcome" data-role="button" data-icon="power" id="btnLogOut">Log Out</a></p>
+            Contact Us
+        </article>
+    </section>
+        <script src="JS/jquery-2.1.0.min.js"></script>
+        <script src="JS/jquery.mobile-1.4.5.min.js"></script>
+        <script src='main.js'></script>
+</body>
+</html>
